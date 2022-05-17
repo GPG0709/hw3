@@ -1,0 +1,22 @@
+<h3> Please complete the following to add a new activity </h3>
+
+<%= form_with :model => @post do |form| %>
+  <p>
+    <%= form.label "title" %>
+    <%= form.text_field "Title" %>
+  </p>
+  <p>
+    <%= form.label "description" %>
+    <%= form.text_field "Description" %>
+  </p>
+  <p>
+    <%= form.label "date" %>
+    <%= form.date_field "Date" %>
+  </p>
+    <p>
+    <%= form.hidden_field "place_id" %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

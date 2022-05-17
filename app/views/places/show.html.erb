@@ -1,0 +1,18 @@
+<h1>Activities in <%= @place["name"]%></h1>
+
+<h2> <%= @place["country"]%> </h2>
+
+<ul>
+    <% for post in @posts %>
+    <h3><%= post["date"] %>,  <%= post["title"] %></h3>
+    <p> <%= post["description"] %> <p>
+    <% end %>
+</ul>
+
+<p>
+    <a href="/posts/new?place_id=<%= @place["id"] %>" > Add a new activity in <%= @place["name"] %> </a>
+</p>
+
+<p>
+    <a href="/places"> Back to all places </a>
+</p>

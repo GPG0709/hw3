@@ -1,0 +1,14 @@
+<h3> Please complete the following to add a new place </h3>
+
+<%= form_with :model => @place do |form| %>
+  <p>
+    <%= form.label "name", "City" %>
+    <%= form.text_field "name" %>
+  </p>
+  
+  <%= form.submit %>
+<% end %>
+
+<p> 
+  <a href="/places"> Return to the Log </a>
+  </p>
