@@ -4,13 +4,15 @@
 
 <ul>
     <% for post in @posts %>
-    <h3><%= post["date"] %>,  <%= post["title"] %></h3>
+    <li>
+    <h3><%= post["posted_on"] %>,  <%= post["title"] %></h3>
     <p> <%= post["description"] %> <p>
+    </li>
     <% end %>
 </ul>
 
 <p>
-    <a href="/posts/new?place_id=<%= @place["id"] %>" > Add a new activity in <%= @place["name"] %> </a>
+    <a href="/posts/new?place_id=<%= @place["id"] %>" > New activity <%= @place["name"] %> </a>
 </p>
 
 <p>
